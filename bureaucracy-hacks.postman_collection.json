@@ -1,0 +1,855 @@
+{
+	"info": {
+		"_postman_id": "cea4c29e-dbd6-4d9a-9d38-bd952fb92cc1",
+		"name": "bureaucracy-hacks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"gabriela.ursachi@yahoo.com\",\r\n    \"username\": \"gabriela_\",\r\n    \"name\": \"Gabriela\",\r\n    \"surname\": \"Ursachi\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/registration",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"gabriela.ursachi@yahoo.com\",\r\n    \"password\": \"password5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changepassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"gabriela.ursachi@yahoo.com\",\r\n    \"newPassword\": \"password5\",\r\n    \"confirmNewPassword\": \"password5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/changepassword",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"changepassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-process-feedback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"gabriela\",\r\n    \"comment\": \"comment3\",\r\n    \"q1\": true,\r\n    \"q2\": 4,\r\n    \"q3\": \"45-60\",\r\n    \"q4\": 3,\r\n    \"day\": \"Miercuri\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/user/Analiza documentara deconturi de tva cu optiune de rambursare/feedbacks",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"Analiza documentara deconturi de tva cu optiune de rambursare",
+						"feedbacks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"gabriela\",\r\n    \"comment\": \"it's ok\",\r\n    \"rating\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/user/contact",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "processes-list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/processes",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"processes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "institutions-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/institutions",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"institutions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "departments-list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"institutionName\": \"ANAF\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/departments-list",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"departments-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateInstitutions",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"Directia de Asistenta Sociala Iasi\",\r\n        \"phone\": \"0232206344\",\r\n        \"site\": \"https://www.dac-iasi.ro/\",\r\n        \"address\": \"Str Mitropolit Varlaam nr. 54\",\r\n        \"email\": \"contact@dac-iasi.ro\"\r\n    },\r\n    {\r\n        \"name\": \"Directia Generala de Asistenta Sociala si Protectia Copilului Iasi\",\r\n        \"phone\": \"0232477731 \",\r\n        \"site\": \"https://www.dasiasi.ro/\",\r\n        \"address\": \"Strada Vasile Lupu, nr. 57A, cod postal 700309\",\r\n        \"email\": \"office.dgaspcis@dasiasi.ro\"\r\n    },\r\n    {\r\n        \"name\": \"Directia Locala pentru Evidenta Persoanelor Iasi\",\r\n        \"phone\": \"0232410314\",\r\n        \"site\": \"https://www.dlep-iasi.ro/\",\r\n        \"address\": \"Iaşi, IULIUS MALL - et. 2, Bdul. Tudor Vladimirescu\",\r\n        \"email\": \"stareacivila@dlep-iasi.ro\"\r\n    },\r\n    {\r\n        \"name\": \"Inspectoratul de Politie Judetean Iasi\",\r\n        \"phone\": \"0232302175\",\r\n        \"site\": \"https://is.politiaromana.ro/\",\r\n        \"address\": \"Str. Mihai Costăchescu, Nr. 2, Cod 700495\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Casa Județeană de Pensii Iași\",\r\n        \"phone\": \"0232240053\",\r\n        \"site\": \"https://www.cjpiasi.ro/home/index.php\",\r\n        \"address\": \"Strada Anastasie Panu 17-19, Iași 700021\",\r\n        \"email\": \"cjp.iasi@cnpp.ro\"\r\n    },\r\n    {\r\n        \"name\": \"Primaria Iasi\",\r\n        \"phone\": \"0232267582\",\r\n        \"site\": \"http://www.primaria-iasi.ro/\",\r\n        \"address\": \"Bd. Stefan cel Mare si Sfant nr. 11, 700064 Iasi\",\r\n        \"email\": \"cabinet.primar@primaria-iasi.ro\"\r\n    },\r\n    {\r\n        \"name\": \"Adi Center - Șoseaua Ștefan cel Mare și Sfânt\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Șoseaua Ștefan cel Mare și Sfânt nr. 7, Iași 700498\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Adi Center - Copou\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Bulevardul Carol I 25, Iași 700507\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Adi Center - Independenței\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"700054, Bulevardul Independenței 14, Iași\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"ASL COPY CENTER\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Str. Zugravi, 8, Iasi 700092\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Nicolina Copy Center\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Șos. Nicolina, Iași\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Lex Copy Center\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Șoseaua Păcurari Nr. 1, Iași 700536\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Master Copy\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Bloc C12, Bulevardul Alexandru cel Bun nr. 40, Iași 700000\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Xerox\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Bulevardul Nicolae Iorga 10, Iași\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Exe Print\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Bulevardul Independenței 26, Iași 700099\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Kboom Photografix\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Strada Tabacului 1B, Iași 707305\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Zoom Copy Center, Tipografia Rotipo\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Aleea Veronica Micle 4, Iași 700505\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Stef Piața Unirii\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Piața Unirii 3, Iași\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Stef Strada Sfântul Lazăr\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Strada Sfântul Lazăr 47, Iași 700259\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Stef Șoseaua Moara de Foc\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Șoseaua Moara de Foc 30, Iași 700108\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Stef Copou\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Bulevardul Carol I, Iași\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Stef Tudor Vladimirescu\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Tudor Vladimirescu\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Stef UMF\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Strada Sfântul Teodor 32, Iași 700115\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Adi Center - Tudor Vladimirescu\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Camin T17 , Parter, Bulevardul Tudor Vladimirescu, Iași 700259\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"Editura si Tipografia PIM\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Șoseaua Ștefan cel Mare și Sfânt 109, Iași 700498\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"PIM - Independentei / UMF\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Bulevardul Independenței 14, Iași 700098\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"PIM - Copou / Exclusive Residence\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Șoseaua Ștefan cel Mare și Sfânt 4, Iași 700497\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"PIM - Tudor Vladimirescu / T18\",\r\n        \"phone\": \"\",\r\n        \"site\": \"\",\r\n        \"address\": \"Bulevardul Tudor Vladimirescu 18, Iași 700305\",\r\n        \"email\": \"\"\r\n    },\r\n    {\r\n        \"name\": \"ANAF\",\r\n        \"phone\": \"0232213332\",\r\n        \"site\": \"https://www.anaf.ro/anaf/internet/Iasi/acasa/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOI9DD3MPIwsjLz83V0NDAJN3ZzcQ3wNDQxCjIAKIoEKDHAARwNC-sP1o_AqcTGEKsBjRUFuhEGmo6IiACtFDV8!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/\",\r\n        \"address\": \"Municipiul IAȘI, Bulevardul Nicolae Iorga Nr. 10 C\",\r\n        \"email\": \"Admin.ISISAFBX01.IS@anaf.ro\"\r\n    },\r\n    {\r\n        \"name\": \"Casa Judeteana de Asigurari de Sanatate Iasi\",\r\n        \"phone\": \"0232218630\",\r\n        \"site\": \"http://www.cnas.ro/hih/\",\r\n        \"address\": \"Str. Gh.Asachi, Nr. 18, 700483, Iasi\",\r\n        \"email\": \"secretariat@cjasis.ro\"\r\n    },\r\n    {\r\n        \"name\": \"Direcția Generală de Pașapoarte\",\r\n        \"phone\": \"0232302801\",\r\n        \"site\": \"https://pasapoarte.mai.gov.ro/\",\r\n        \"address\": \"Bld. Primăverii, nr. 36, Iași\",\r\n        \"email\": \"pasapoarte@prefecturaiasi.ro\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/updateinstitutions",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"updateinstitutions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateDepartments",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"institutie\": \"Directia de Asistenta Sociala Iasi\",\r\n        \"departamente\": [\r\n            \"Alocatii si Indemnizatii\",\r\n            \"Ajutor Social\",\r\n            \"Autoritate Tutelara\",\r\n            \"Registratura\",\r\n            \"Casierie\",\r\n            \"Director Executiv Luminita Munteanu\",\r\n            \"Serviciu personal\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Directia Generala de Asistenta Sociala si Protectia Copilului Iasi\",\r\n        \"departamente\": [\r\n            \"Departamentul Asistenta Socială pentru Copil şi Familie\",\r\n            \"Departamentul Asistenta Socială Persoane Adulte\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Directia Locala pentru Evidenta Persoanelor Iasi\",\r\n        \"departamente\": [\r\n            \"Directia locala de evidenta a persoanelor\",\r\n            \"Nasteri - Starea Civila - Primiri\",\r\n            \"Nasteri - Starea Civila - Eliberari\",\r\n            \"Casatorii - Starea Civila - Primiri\",\r\n            \"Casatorii - Starea Civila - Oficieri\",\r\n            \"Decese - Starea Civila\",\r\n            \"Duplicate, Dovezi de Starea Civila, Anexa 9 - Primiri\",\r\n            \"Duplicate, Dovezi de Starea Civila, Anexa 9 - Eliberari\",\r\n            \"Anexa 24 - Starea Civila\",\r\n            \"Transcrieri - Starea Civila - Primiri\",\r\n            \"Transcrieri - Starea Civila - Eliberari\",\r\n            \"Acte Speciale (rectificari, schimbari de nume, inscrieri mentiuni din strainatate), Divorturi Administrative, Registratura\",\r\n            \"Evidenta Persoanelor (Buletine) - Primiri Cereri/ Eliberari/ Casierie\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Inspectoratul de Politie Judetean Iasi\",\r\n        \"departamente\": [\r\n            \"Inspectoratul de Politie Judetean Iasi - Comisar-sef de politie GITLAN COSTEL\",\r\n            \"Inspectoratul de Politie Judetean Iasi - Comisar-sef de politie SVALJA MIHAI\",\r\n            \"Inspectoratul de Politie Judetean Iasi - Comisar-sef de politie SPIRIDON ALEXANDRU\",\r\n            \"Politia Municipiului Iasi - Comisar-sef de politie CAPRA AUGUSTIN\",\r\n            \"Politia Municipiului Iasi - Comisar-sef de politie MOLDOVANU MARIUS\",\r\n            \"Sectia 1 Politie Iasi - Comisar de politie CIOBANU ALEX\",\r\n            \"Sectia 1 Politie Iasi - Subcomisar de politie CARABA IONUT\",\r\n            \"Sectia 2 Politie Iasi - Comisar de politie BARBOSANU MARIUS-CIPRIAN\",\r\n            \"Sectia 2 Politie Iasi - Comisar de politie HORDILA ALEXANDRU\",\r\n            \"Sectia 3 Politie Iasi - Comisar-sef de politie BUCULEI OVIDIU\",\r\n            \"Sectia 3 Politie Iasi - Comisar-sef de politie TARANU MADALIN\",\r\n            \"Sectia 4 Politie Iasi - Comisar-sef de politie SUSANU GABRIEL\",\r\n            \"Sectia 4 Politie Iasi - Comisar de politie AZAMFIREI PETRICA\",\r\n            \"Sectia 5 Politie Iasi - Comisar-sef de politie NISTOR VALENTIN\",\r\n            \"Sectia 5 Politie Iasi - Comisar-sef de politie SUNA MIHAI\",\r\n            \"Sectia 6 Politie Iasi - Comisar-sef de politie GAITAN CRISTIAN\",\r\n            \"Sectia 6 Politie Iasi - Subcomisar de politie SORIC LUCIAN\",\r\n            \"Serviciul Rutier\",\r\n            \"Politia municipiului PASCANI - Subcomisar de politie VASILIU MIHAITA\",\r\n            \"Politia municipiului PASCANI - Comisar de politie CIOHORANU CRISTIAN\",\r\n            \"Politia orasului HARLAU - Comisar de politie MIHAILA MIHAI\",\r\n            \"Politia orasului TARGU FRUMOS - Comisar-sef de politie PASANIUC MINODOR\",\r\n            \"Politia orasului PODU ILOAIEI - Comisar de politie SCUTELNICU IONUT\",\r\n            \"Serviciul de Ordine Publica\",\r\n            \"Ghiseul de Cazier Judiciar\",\r\n            \"Serviciul Arme, Explozivi si Substante Periculoase\",\r\n            \"Serviciului de Investigare a Criminalității Economice\",\r\n            \"Inspectoratul de Politie Judetean Iasi\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Casa Județeană de Pensii Iași\",\r\n        \"departamente\": [\r\n            \"Casa Județeană de Pensii Iași\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Primaria Iasi\",\r\n        \"departamente\": [\r\n            \"DIRECTIA FOND LOCATIV, Director Cristina Albisteanu\",\r\n            \"SERVICIUL ASOCIATII DE PROPRIETARI\",\r\n            \"Direcția Exploatare Patrimoniu\",\r\n            \"SERVICIUL ADMINISTRARE PARCARI\",\r\n            \"BIROUL AVIZE MICI INTREPRINZATORI\",\r\n            \"SC SALUBRIS, Director Catalin Neculau\",\r\n            \"SC CITADIN, Director Marius Ionescu\",\r\n            \"SC TERMOSERVICE S.A, Director Ciprian Chirita\",\r\n            \"COMPANIA DE TRANSPORT PUBLIC IASI, Director Cristian Stoica\",\r\n            \"SC SERVICII PUBLICE S.A, Director Laurentiu Ivan\",\r\n            \"SC ECOPIATA S.A, Director Cristinel Starica\",\r\n            \"DIRECTIA ASISTENTA SOCIALA, Director Luminita Munteanu\",\r\n            \"DIRECTIA LOCALA DE EVIDENTA A PERSOANELOR, Director Executiv Marius Constantin Bodoga\",\r\n            \"SERVICIUL STARE CIVILA, Sef Serviciu Renata-Mihaela Marin\",\r\n            \"SERVICIUL CENTRUL DE INFORMATII PENTRU CETATENI\",\r\n            \"COMPARTIMENT RELATII CU PUBLICUL\",\r\n            \"CENTRUL DE CARTIER TATARASI\",\r\n            \"CENTRUL DE CARTIER ALEXANDRU CEL BUN\",\r\n            \"CENTRUL DE CARTIER NICOLINA\",\r\n            \"CENTRUL DE CARTIER PACURARI\",\r\n            \"CENTRUL DE CARTIER BLD. POITIERS\",\r\n            \"CASIERIILE Primariei Municipiului Iasi\",\r\n            \"DIRECTIA ARHITECTURA SI URBANISM\",\r\n            \"SERVICIUL G.I.S\",\r\n            \"SERVICIUL CADASTRU\",\r\n            \"SERVICIUL AUTORIZARE CONSTRUCTII\",\r\n            \"BIROUL REGLEMENTARE PUBLICITATE URBANA\",\r\n            \"BIROUL SPATII VERZI SI SALUBRITATE\",\r\n            \"SERVICIUL STRAZI MUNICIPALE\",\r\n            \"BIROUL VERSANTI\",\r\n            \"SERVICIUL EFICIENTA ENERGETICA SI UTILITATI PUBLICE\",\r\n            \"BIROUL REGLEMENTARE TRANSPORTURI URBANE\",\r\n            \"DIRECTIA JURIDICA, SERVICIUL CONTENCIOS\",\r\n            \"SERVICIUL CORP CONTROL PRIMAR\",\r\n            \"SERVICIUL RESURSE UMANE\",\r\n            \"COMPARTIMENTUL REGISTRUL AGRICOL\",\r\n            \"Serviciul Control Urbanism (in cadrul POLITIEI LOCALE IASI)\",\r\n            \"SECRETAR MUNICIPIUL IASI\",\r\n            \"DIRECTIA RELATII PUBLICE SI TRANSPARENTA DECIZIONALA\",\r\n            \"DIRECTIA GENERALA TEHNICA SI DEZVOLTARE\",\r\n            \"DIRECTIA TEHNICA SI SERVICII COMUNITARE\",\r\n            \"DIRECTIA GENERALA ECONOMICA SI FINANTE PUBLICE LOCALE\",\r\n            \"DIRECTIA DE ASISTENTA COMUNITARA\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Adi Center - Șoseaua Ștefan cel Mare și Sfânt\",\r\n        \"departamente\": [\r\n            \"Adi Center - Șoseaua Ștefan cel Mare și Sfânt\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Adi Center - Copou\",\r\n        \"departamente\": [\r\n            \"Adi Center - Copou\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Adi Center - Independenței\",\r\n        \"departamente\": [\r\n            \"Adi Center - Independenței\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"ASL COPY CENTER\",\r\n        \"departamente\": [\r\n            \"ASL COPY CENTER\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Nicolina Copy Center\",\r\n        \"departamente\": [\r\n            \"Nicolina Copy Center\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Lex Copy Center\",\r\n        \"departamente\": [\r\n            \"Lex Copy Center\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Master Copy\",\r\n        \"departamente\": [\r\n            \"Master Copy\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Xerox\",\r\n        \"departamente\": [\r\n            \"Xerox\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Exe Print\",\r\n        \"departamente\": [\r\n            \"Exe Print\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Kboom Photografix\",\r\n        \"departamente\": [\r\n            \"Kboom Photografix\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Zoom Copy Center, Tipografia Rotipo\",\r\n        \"departamente\": [\r\n            \"Zoom Copy Center, Tipografia Rotipo\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Stef Piața Unirii\",\r\n        \"departamente\": [\r\n            \"Stef Piața Unirii\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Stef Strada Sfântul Lazăr\",\r\n        \"departamente\": [\r\n            \"Stef Strada Sfântul Lazăr\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Stef Șoseaua Moara de Foc\",\r\n        \"departamente\": [\r\n            \"Stef Șoseaua Moara de Foc\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Stef Copou\",\r\n        \"departamente\": [\r\n            \"Stef Copou\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Stef Tudor Vladimirescu\",\r\n        \"departamente\": [\r\n            \"Stef Tudor Vladimirescu\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Stef UMF\",\r\n        \"departamente\": [\r\n            \"Stef UMF\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Adi Center - Tudor Vladimirescu\",\r\n        \"departamente\": [\r\n            \"Adi Center - Tudor Vladimirescu\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Editura si Tipografia PIM\",\r\n        \"departamente\": [\r\n            \"Editura si Tipografia PIM\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"PIM - Independentei / UMF\",\r\n        \"departamente\": [\r\n            \"PIM - Independentei / UMF\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"PIM - Copou / Exclusive Residence\",\r\n        \"departamente\": [\r\n            \"PIM - Copou / Exclusive Residence\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"PIM - Tudor Vladimirescu / T18\",\r\n        \"departamente\": [\r\n            \"PIM - Tudor Vladimirescu / T18\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"ANAF\",\r\n        \"departamente\": [\r\n            \"Serviciul executare silita si stingere a creantelor fiscale Persoane Juridice\",\r\n            \"Serviciul Colecta si executare silita - Persoane Juridice\",\r\n            \"Biroul Administrare Sedii secundare - Contribuabili mari\",\r\n            \"Serviciul Registru contribuabili - Declaratii fiscale persoane fizice\",\r\n            \"Compartimentul evitarea dublei impuneri si acorduri fiscale internationale\",\r\n            \"Biroul de gestiune registru contribuabili, monitorizare declaratii fiscale si bilanturi\",\r\n            \"Biroul pentru gestionarea cazierului fiscal\",\r\n            \"Biroul Solutionare contestatii\",\r\n            \"Serviciul Incasarea si evidenta veniturilor bugetare\",\r\n            \"Compartiment Selectare dosare si programe control, coordonare si sinteza activitatii de inspectie fiscala\",\r\n            \"Biroul Coordonare, programare, analiza si indrumare activitatea de inspectia fiscala\",\r\n            \"Compartiment analiza de risc\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Casa Judeteana de Asigurari de Sanatate Iasi\",\r\n        \"departamente\": [\r\n            \"Casa Judeteana de Asigurari de Sanatate Iasi\"\r\n        ]\r\n    },\r\n    {\r\n        \"institutie\": \"Direcția Generală de Pașapoarte\",\r\n        \"departamente\": [\r\n            \"Primiri Documente\",\r\n            \"Eliberări Pașapoarte\"\r\n        ]\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/departments",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProcesses",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  \r\n{\r\n  \"institution\": \"Casa Judeteana de Asigurari de Sanatate Iasi\",\r\n  \"process\": \"Eliberarea cardului european\",\r\n  \"id\":91,\r\n  \"cases\": [\"Pentru eliberarea cardului european\"],\r\n  \"departaments\": [\"Casa Judeteana de Asigurari de Sanatate Iasi\"],\r\n  \"forms\": [[\"Eliberare card european\"]],\r\n  \"necessary\": [[[\"Cerere card european\", \"Adeverinta Salariat\"]]],\r\n  \"generalInfo\": [[\"\"]],\r\n  \"files\": [\r\n    \"CerereCardEuropean\",\r\n    \"AdeverintaSalariat\",\r\n    \"ModelCertificatProvizoriu\",\r\n    \"CerereCardEuropeanDuplicat\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/processes",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"processes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateprocessRequest",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"institution\": \"ANAF\",\r\n    \"process\": \"Eliberarea cardului european\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/update-processes-request",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"update-processes-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "institutionProcessesList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/processes/Directia de Asistenta Sociala Iasi",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"processes",
+						"Directia de Asistenta Sociala Iasi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewAllFeedbacks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/user/Analiza documentara deconturi de tva cu optiune de rambursare/view-feedbacks",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"Analiza documentara deconturi de tva cu optiune de rambursare",
+						"view-feedbacks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProcessInformation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/user/process/Analiza documentara deconturi de tva cu optiune de rambursare",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"process",
+						"Analiza documentara deconturi de tva cu optiune de rambursare"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getInstitutionInformation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/user/institution/ANAF",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"institution",
+						"ANAF"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewAllReviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/user/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generateRoute",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"avoidVignette\": [\r\n        \"AUS\",\r\n        \"CHE\"\r\n    ],\r\n    \"currentLatitude\": 27.571628,\r\n    \"currentLongitude\": 47.176110,\r\n    \"institutions\": [\r\n        69\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/route",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"route"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteComment",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/hide-comment",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"hide-comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showComment",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/show-comment",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"show-comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePrograms",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orar\": {\r\n        \"institutie\": {\r\n            \"institution\": \"Primaria Iasi\"\r\n        },\r\n        \"programe\": [\r\n            {\r\n                \"titlu\": \"DIRECTIA FOND LOCATIV, Director Cristina Albisteanu\",\r\n                \"program\": {\r\n                    \"joi\": {\r\n                        \"open\": \"14:00\",\r\n                        \"close\": \"18:30\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SERVICIUL ASOCIATII DE PROPRIETARI\",\r\n                \"program\": {\r\n                    \"marti\": {\r\n                        \"open\": \"12:00\",\r\n                        \"close\": \"14:00\"\r\n                    },\r\n                    \"miercuri\": {\r\n                        \"open\": \"10:00\",\r\n                        \"close\": \"12:00\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"10:00\",\r\n                        \"close\": \"12:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"DIRECTIA EXPLOATARE PATRIMONIU, Director Grigoras Radu Mihai\",\r\n                \"program\": {\r\n                    \"miercuri\": {\r\n                        \"open\": \"10:00\",\r\n                        \"close\": \"14:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SERVICIUL ADMINISTRARE PARCARI\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"13:00\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"12:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"miercuri\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"13:00\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"12:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"13:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"BIROUL AVIZE MICI INTREPRINZATORI\",\r\n                \"program\": {\r\n                    \"marti\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SC SALUBRIS, Director Catalin Neculau\",\r\n                \"program\": {\r\n                    \"joi\": {\r\n                        \"open\": \"12:00\",\r\n                        \"close\": \"14:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SC CITADIN, Director Marius Ionescu\",\r\n                \"program\": {\r\n                    \"joi\": {\r\n                        \"open\": \"10:00\",\r\n                        \"close\": \"12:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SC TERMOSERVICE S.A, Director Ciprian Chirita\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"8:00\",\r\n                        \"close\": \"16:00\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"11:00\",\r\n                        \"close\": \"19:00\"\r\n                    },\r\n                    \"miercuri\": {\r\n                        \"open\": \"8:00\",\r\n                        \"close\": \"16:00\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"11:00\",\r\n                        \"close\": \"19:00\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"8:00\",\r\n                        \"close\": \"16:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"COMPANIA DE TRANSPORT PUBLIC IASI, Director Cristian Stoica\",\r\n                \"program\": {\r\n                    \"miercuri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"12:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SC SERVICII PUBLICE S.A, Director Laurentiu Ivan\",\r\n                \"program\": {\r\n                    \"joi\": {\r\n                        \"open\": \"12:00\",\r\n                        \"close\": \"16:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SC ECOPIATA S.A, Director Cristinel Starica\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"10:00\",\r\n                        \"close\": \"12:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"DIRECTIA ASISTENTA SOCIALA, Director Luminita Munteanu\",\r\n                \"program\": {\r\n                    \"joi\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"DIRECTIA LOCALA DE EVIDENTA A PERSOANELOR, Director Executiv Marius Constantin Bodoga\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SERVICIUL STARE CIVILA, Sef Serviciu Renata-Mihaela Marin\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"10:00\",\r\n                        \"close\": \"12:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SERIVICUL EVIDENTA PERSOANELOR\",\r\n                \"program\": {\r\n                    \"miercuri\": {\r\n                        \"open\": \"14:00\",\r\n                        \"close\": \"18:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SERVICIUL CENTRUL DE INFORMATII PENTRU CETATENI\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"miercuri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"18:30\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"COMPARTIMENT RELATII CU PUBLICUL\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"miercuri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"18:30\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"CENTRUL DE CARTIER TATARASI\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"miercuri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"18:30\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"CENTRUL DE CARTIER ALEXANDRU CEL BUN\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"miercuri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"18:30\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"CENTRUL DE CARTIER NICOLINA\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"miercuri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"18:30\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"CENTRUL DE CARTIER PACURARI\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"miercuri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"18:30\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"CENTRUL DE CARTIER BLD. POITIERS\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"miercuri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"18:30\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"CASIERIILE Primariei Municipiului Iasi\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"miercuri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"18:30\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"DIRECTIA ARHITECTURA SI URBANISM, Arhitect Sef Alexandru Florin Mustiata\",\r\n                \"program\": {\r\n                    \"marti\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SERVICIUL G.I.S\",\r\n                \"program\": {\r\n                    \"marti\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SERVICIUL CADASTRU\",\r\n                \"program\": {\r\n                    \"joi\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SERVICIUL AUTORIZARE CONSTRUCTII\",\r\n                \"program\": {\r\n                    \"marti\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"BIROUL REGLEMENTARE PUBLICITATE URBANA\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:30\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"BIROUL SPATII VERZI SI SALUBRITATE\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SERVICIUL STRAZI MUNICIPALE\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"BIROUL VERSANTI\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SERVICIUL EFICIENTA ENERGETICA SI UTILITATI PUBLICE\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"BIROUL REGLEMENTARE TRANSPORTURI URBANE\",\r\n                \"program\": {\r\n                    \"marti\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"DIRECTIA JURIDICA, SERVICIUL CONTENCIOS\",\r\n                \"program\": {\r\n                    \"joi\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SERVICIUL CORP CONTROL PRIMAR\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"SERVICIUL RESURSE UMANE\",\r\n                \"program\": {\r\n                    \"marti\": {\r\n                        \"open\": \"13:00\",\r\n                        \"close\": \"15:00\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"9:00\",\r\n                        \"close\": \"11:00\"\r\n                    }\r\n                }\r\n            },\r\n            {\r\n                \"titlu\": \"COMPARTIMENTUL REGISTRUL AGRICOL\",\r\n                \"program\": {\r\n                    \"luni\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"marti\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"miercuri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"joi\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    },\r\n                    \"vineri\": {\r\n                        \"open\": \"8:30\",\r\n                        \"close\": \"16:30\"\r\n                    }\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/programs",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"programs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProgramRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"institution\": \"ANAF\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/update-programs-request",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"update-programs-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateInstitutionsRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/admin/update-institutions-request",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"update-institutions-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateDepartmentsRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/admin/update-departments-request",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"update-departments-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddAdmin",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"murariugabriela01@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/make-admin",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"make-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAdmin",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"gabriela.ursachi@yahoo.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/revoke-admin-role",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"revoke-admin-role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CalculateStatistics",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"institution\": \"ANAF\",\r\n    \"process\": \"Cazier Fiscal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/statistics",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"statistics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFileLink",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fileName\": \"Casa Județeană de Pensii Iași_contr_asig_nou2018\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/file-link",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"file-link"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addInstitutionAdmin",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"institution\": 73,\r\n    \"email\": \"gabriela.ursachi@yahoo.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/add-institution-admin",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"add-institution-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteReview",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 62\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/review",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewInstitutionFeedbacks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/user/ANAF/institution-feedbacks",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"ANAF",
+						"institution-feedbacks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserSettingsRequest",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numarBuletin\": \"998899\",\r\n    \"address\": \"\",\r\n    \"cnp\": \"123456789\",\r\n    \"judet\": \"Iasi\",\r\n    \"userId\": 49,\r\n    \"dataNastere\": \"13/11/2000\",\r\n    \"phone\": \"0770000000\",\r\n    \"surname\": \"Ursachi\",\r\n    \"name\": \"Gabriela\",\r\n    \"email\":\"gabriela.ursachi@yahoo.com\",\r\n    \"serieBuletin\": \"MX\",\r\n    \"localitate\": \"Iasi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/user/personal-data",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"personal-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeInstitutionAdmin",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"institution\": 73,\r\n    \"email\": \"gabriela.ursachi@yahoo.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/admin/revoke-institution-admin",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"admin",
+						"revoke-institution-admin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
